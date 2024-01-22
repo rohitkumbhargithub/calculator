@@ -1,0 +1,41 @@
+.Cal-Conatainer{
+    width: 40%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(131, 141, 141);
+}
+
+.Cal-Conatainer h1{
+    text-align: center;
+    color: #fff;
+}
+
+.display-value input{
+    background-color: rgb(226, 219, 219);
+    width: 78%;
+    padding: 25px;
+    outline: none;
+    text-align: end;
+    border-radius: 10px;
+}
+
+.display-value input[type="text"]{
+    font-size: 20px;
+}
+
+.btn{
+    padding: 20px;
+}
+
+.btn input{
+    cursor: pointer;
+    margin: 10px;
+    width: 20%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn input[type="button"]{
+    font-size: 20px;
+}

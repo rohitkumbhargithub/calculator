@@ -1,6 +1,8 @@
 // import React, {useState, useEffect} from 'react';  // useState basically known as 
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
+import Calculater from './Calculater';
 
 
 
@@ -212,56 +214,67 @@ import './App.css';
 // using genric and sparad operator
 
 
-function useFromInput(initialValue) {
-  const [value, setValue] = useState('');   // Generic Method
+// function useFromInput(initialValue) {
+//   const [value, setValue] = useState('');   // Generic Method
 
 
-  function handelChange(e) {
-    setValue(e.target.value);
-  }
+//   function handelChange(e) {
+//     setValue(e.target.value);
+//   }
 
-  return {
-    value,
-    onChange: handelChange
-  }
+//   return {
+//     value,
+//     onChange: handelChange
+//   }
+// }
+
+// function LoginFrom() {
+
+//   const email = useFromInput('');
+//   const password = useFromInput('');
+
+//     return (
+//       <form>
+//         <div>Email</div>
+//           <div>
+//                <input type='text' 
+//               //  value={email.value}
+//               //  onChange={email.onChange}   // instead of using ... (speard operator)
+//                {...email}
+//               />
+//           </div><br></br>
+//           <div>Name</div>
+//           <div>
+//                <input type='password' 
+//                       // value={password.value}
+//                       // onChange={password.onChange}
+//                       {...password}
+//               />
+//           </div>
+//           <p>
+//           <strong>
+//             <em>Email: </em>
+//           </strong>{' '}
+//           {email.value}
+//           <strong>
+//             <em> | Password: </em>
+//           </strong>{' '}
+//           {password.value}
+//           </p>
+//       </form>
+//     )
+// }
+
+
+// export default LoginFrom;
+
+
+function App(){
+  return (
+    <div className="App">
+        <Calculater />
+    </div>
+  )
 }
 
-function LoginFrom() {
-
-  const email = useFromInput('');
-  const password = useFromInput('');
-
-    return (
-      <form>
-        <div>Email</div>
-          <div>
-               <input type='text' 
-              //  value={email.value}
-              //  onChange={email.onChange}   // instead of using ... (speard operator)
-               {...email}
-              />
-          </div><br></br>
-          <div>Name</div>
-          <div>
-               <input type='password' 
-                      // value={password.value}
-                      // onChange={password.onChange}
-                      {...password}
-              />
-          </div>
-          <p>
-          <strong>
-            <em>Email: </em>
-          </strong>{' '}
-          {email.value}
-          <strong>
-            <em> | Password: </em>
-          </strong>{' '}
-          {password.value}
-          </p>
-      </form>
-    )
-}
-
-
-export default LoginFrom;
+export default App;
