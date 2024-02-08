@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { evaluate } from 'mathjs';
+
 import './Calculater.css'
 
 
@@ -26,7 +28,7 @@ function Calculater(){
                         <input type="button" value="7" onClick={e => setValue(value + e.target.value)}/>
                         <input type="button" value="8" onClick={e => setValue(value +e.target.value)}/>
                         <input type="button" value="9" onClick={e => setValue(value +e.target.value)}/>
-                        <input type="button" style={styles.sideBtn} value="x"  onClick={e => setValue(value +e.target.value)}/>
+                        <input type="button" style={styles.sideBtn} value="*"  onClick={e => setValue(value +e.target.value)}/>
                     </div>
 
                     <div>
@@ -48,7 +50,7 @@ function Calculater(){
                         <input type="button" value="." onClick={e => setValue(value +e.target.value)} />
                         <input type="button" value="0" onClick={e => setValue(value +e.target.value)} />
                         <input type="button" value="00" onClick={e => setValue(value +e.target.value)} />
-                        <input type="button" style={styles.sideBtn} value="=" onClick={e => setValue(eval(value))}/>
+                        <input type="button" style={styles.sideBtn} value="=" onClick={e => setValue(evaluate(value))}/>
                     </div>
                 </div>
                 </form>
